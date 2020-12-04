@@ -21,13 +21,11 @@ const App = () => {
       recipeRequest + `search?q=${keyword}` + DEFA_PARM
     );
     const responseJson = await response.json();
-    console.log(responseJson.hits);
     setRecipes(responseJson.hits);
   };
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
-    console.log(e.target.value);
   };
   const getSearch = (e) => {
     e.preventDefault();
